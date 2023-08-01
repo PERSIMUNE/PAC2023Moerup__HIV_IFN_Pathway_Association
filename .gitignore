@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Sara_HIV_SKATO_Codes_Public.Rproj
+DockerScript
+checkDependencies.R
+GeneAnalysis*
+DockerImage
