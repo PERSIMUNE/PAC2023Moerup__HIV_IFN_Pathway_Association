@@ -77,7 +77,10 @@ An example of the parameter file would look like this:
 
 ----
 ##### Special Remarks
-*I would like to give some special acknowledgement to Sara Bohnstedt Moerup for her effort and perseverance in learning and adapting to running analysis programs. As a clinician-scientist, it is not easy to jump into bioinformatics, especially when needing to deal with backend coding. Recognition of these efforts when there is a clear need to bridge the skill gap is often understated. So here, I wish express my appreciation and recognition of Sara's efforts to understand the messy side of bioinformatics in this project.* 
+
+_I would like to give some special acknowledgement to Sara Bohnstedt Moerup for her effort and perseverance in learning and adapting to running analysis programs. As a clinician-scientist, it is not easy to jump into bioinformatics, especially when needing to deal with backend coding. Recognition of these efforts when there is a clear need to bridge the skill gap is often understated. So here, I wish express my appreciation and recognition of Sara's efforts to understand the messy side of bioinformatics in this project._
+
 -Preston
+
 ----
 This README file is written using [Dillinger](dillinger.io).
