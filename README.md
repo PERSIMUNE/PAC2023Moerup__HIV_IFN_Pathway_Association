@@ -8,13 +8,13 @@ Initial Code Development by:
 
 Modification of code and dockerisation by:
 - Preston Leung (preston.yui.sum.leung@regionh.dk)
-- 
+ 
 Additional contacts:
 - Daniel Murray (daniel.dawson.murray@regionh.dk)
 - Joanne Reekie (joanne.reekie@regionh.dk)
 
 ## Citation:
-Please cite this paper when using this tool.
+Please cite this paper when using this tool (To be updated).
 
 ## Tool Description
 Originally developed for testing SNPs within a single gene and its association with a specific, this tool has been modified to include SNPs from different genes, allowing gene sets to be tested. Genes SKATO Analysis are a set of RScripts put into a docker such that it can be downloaded and executed on the user's computer without the need to install required packages.  
@@ -69,13 +69,15 @@ An example of the parameter file would look like this:
 |pheno_file| A dataframe-like file storing the clinical data and/or phenotypes (columns) of each subject/patient (rows) stored in `.RDS` format. |
 |geno_file| A dataframe-like file storing subject/patient id (rows) by SNPs (columns). The number 1 or 2 represents the copies of SNP present and zero for absence for each subject/patient. Stored in `.RDS` format. The column names for the SNPs should be same as the AffyIDs in affy_file. |
 
-`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file. In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka Affymetrix SNP IDs or AffyID). For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID.For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
-
-
+`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file. In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka Affymetrix SNP IDs or AffyID). For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
 
 [![CHIP](https://chip.dk/Portals/0/CHIP_new.png?ver=2020-10-01-104734-463)](https://chip.dk)
 
 [![INSIGHT](https://chip.dk/portals/0/files/INSIGHT/INSIGHT-logo.png?ver=2020-06-22-123834-000)](http://insight.ccbr.umn.edu)
 
-
+----
+##### Special Remarks
+*I would like to give some special acknowledgement to Sara Bohnstedt Moerup for her effort and perseverance in learning and adapting to running analysis programs. As a clinician-scientist, it is not easy to jump into bioinformatics, especially when needing to deal with backend coding. Recognition of these efforts when there is a clear need to bridge the skill gap is often understated. So here, I wish express my appreciation and recognition of Sara's efforts to understand the messy side of bioinformatics in this project.* 
+-Preston
+----
 This README file is written using [Dillinger](dillinger.io).
