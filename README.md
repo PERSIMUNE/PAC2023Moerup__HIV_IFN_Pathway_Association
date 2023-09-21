@@ -77,6 +77,7 @@ An example of the parameter file would look like this:
 
 ----
 
+
 ##### R Packages used:
   - Arora S, Morgan M, Carlson M, Pagès H (2022). _GenomeInfoDb: Utilities for manipulating chromosome names, including modifying them to follow a particular naming style_. R package version 1.30.1, <URL: https://bioconductor.org/packages/GenomeInfoDb>.
   - Bache S, Wickham H (2022). _magrittr: A Forward-Pipe Operator for R_. R package version 2.0.3, <URL: https://CRAN.R-project.org/package=magrittr>.
@@ -106,6 +107,7 @@ An example of the parameter file would look like this:
   - Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A Grammar of Data Manipulation_. R package version 1.1.2, <URL: https://CRAN.R-project.org/package=dplyr>.
   - Wickham H, Henry L (2023). _purrr: Functional Programming Tools_. R package version 1.0.1, <URL: https://CRAN.R-project.org/package=purrr>.
   - Wickham H, Hester J, Chang W, Bryan J (2022). _devtools: Tools to Make Developing R Packages Easier_. R package version 2.4.5, <URL: https://CRAN.R-project.org/package=devtools>.
+
 
 
 ----
