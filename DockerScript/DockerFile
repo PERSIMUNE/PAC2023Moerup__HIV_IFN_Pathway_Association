@@ -1,0 +1,65 @@
+# Ubuntu base image with 20.04 
+# FROM ubuntu:20.04
+# FROM rocker/r-ubuntu:20.04
+# FROM rocker/tidyverse:latest AS RBASE
+FROM bioconductor/bioconductor_docker:devel
+# Make a work folder that will be at root folder
+WORKDIR /dockerWorkDir
+
+# Copy the things needed to be built into docker image
+# here all relevant libraries are in Library folder
+# same with Tools. This is so we can minimise the number
+# of COPY commands. 
+COPY Codes /dockerWorkDir/codes/
+COPY Manual_Install_RPackages /dockerWorkDir/RPackages/
+# get essential build items and tools
+RUN apt-get update && \
+    apt-get upgrade -y && \    
+    # apt-get install -y software-properties-common && \
+    # add-apt-repository -y ppa:deadsnakes/ppa && \
+    # apt-get update && \
+    # apt-get install -y build-essential &&\            
+# install R libraries
+    install2.r --error \
+    BiocManager \
+    SKAT \    
+    optparse \
+    ggplot2 \    
+    OneR \ 
+    dplyr \
+    MASS \
+    magrittr \
+    devtools \
+    R.utils \
+    purrr \
+    broom \
+    tibble \
+    formatR \
+    lambda.r \
+    futile.options \
+    matrixStats \
+    futile.logger \
+    snow \
+    BH \        
+    rjson \
+    filelock \
+    XML \        
+    checkmate \    
+    gridExtra \
+    htmlTable \
+    viridis \
+    Formula \
+    gsubfn \
+    proto \
+    chron \    
+    Hmisc \
+    sqldf \
+    plyr && \
+# packages that error
+    Rscript -e "install.packages('restfulr_0.0.15.tar.gz',lib='/dockerWorkDir/RPackages',dependencies=TRUE, repos=NULL)" && \
+# Run biocmanager to install packages in R
+    #R -e 'requireNamespace("BiocManager"); BiocManager::install("EBImage")'
+    Rscript -e 'BiocManager::install("mygene")' && \
+# remove unnecessary items
+    rm -rf /dockerWorkDir/RPackages
+ENTRYPOINT ["Rscript", "/dockerWorkDir/codes/GeneAnalysis_SKATO.R"]

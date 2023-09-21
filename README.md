@@ -77,38 +77,15 @@ An example of the parameter file would look like this:
 
 ----
 
-
-##### R Packages used:
-  - Arora S, Morgan M, Carlson M, Pagès H (2022). _GenomeInfoDb: Utilities for manipulating chromosome names, including modifying them to follow a particular naming style_. R package version 1.30.1, <URL: https://bioconductor.org/packages/GenomeInfoDb>.
-  - Bache S, Wickham H (2022). _magrittr: A Forward-Pipe Operator for R_. R package version 2.0.3, <URL: https://CRAN.R-project.org/package=magrittr>.
-  - Bates D, Maechler M, Jagan M (2023). _Matrix: Sparse and Dense Matrix Classes and Methods_. R package version 1.5-4, <URL: https://CRAN.R-project.org/package=Matrix>.
-  - Bengtsson H (2003). “The R.oo package - Object-Oriented Programming with References Using Standard R Code.” In Hornik K, Leisch F, Zeileis A (eds.), _Proceedings of the 3rd International Workshop on Distributed Statistical Computing (DSC 2003)_. <URL: https://www.r-project.org/conferences/DSC-2003/Proceedings/Bengtsson.pdf>.
-  - Bengtsson H (2003). “The R.oo package - Object-Oriented Programming with References Using Standard R Code.” In Hornik K, Leisch F, Zeileis A (eds.), _Proceedings of the 3rd International Workshop on Distributed Statistical Computing (DSC 2003)_. <URL: https://www.r-project.org/conferences/DSC-2003/Proceedings/Bengtsson.pdf>.
-  - Bengtsson H (2022). _R.utils: Various Programming Utilities_. R package version 2.12.2, <URL: https://CRAN.R-project.org/package=R.utils>.
-  - Dey R, Lee S (2020). _SPAtest: Score Test and Meta-Analysis Based on Saddlepoint Approximation_. R package version 3.1.2, <URL: https://CRAN.R-project.org/package=SPAtest>.
-  - Huber W, Carey VJ, Gentleman R, Anders S, Carlson M, Carvalho BS, Bravo HC, Davis S, Gatto L, Girke T, Gottardo R, Hahne F, Hansen KD, Irizarry RA, Lawrence M, Love MI, MacDonald J, Obenchain V, Ole's AK, Pag`es H, Reyes A, Shannon P, Smyth GK, Tenenbaum D, Waldron L, Morgan M (2015). “Orchestrating high-throughput genomic analysis with Bioconductor.” _Nature Methods_, *12*(2), 115-121. <URL: http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html>.
-  - Huber, W., Carey, J. V, Gentleman, R., Anders, S., Carlson, M., Carvalho, S. B, Bravo, C. H, Davis, S., Gatto, L., Girke, T., Gottardo, R., Hahne, F., Hansen, D. K, Irizarry, A. R, Lawrence, M., Love, I. M, MacDonald, J., Obenchain, V., Ole's, K. A, Pag`es, H., Reyes, A., Shannon, P., Smyth, K. G, Tenenbaum, D., Waldron, L., Morgan, M. (2015). “Orchestrating high-throughput genomic analysis with Bioconductor.” _Nature Methods_, *12*(2), 115-121. <URL: http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html>.
-  - Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.” _PLoS Computational Biology_, *9*. doi: 10.1371/journal.pcbi.1003118 (URL: https://doi.org/10.1371/journal.pcbi.1003118), <URL: http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118>.
-  - Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.” _PLoS Computational Biology_, *9*. doi: 10.1371/journal.pcbi.1003118 (URL: https://doi.org/10.1371/journal.pcbi.1003118), <URL: http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118>.
-  - Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.” _PLoS Computational Biology_, *9*. doi: 10.1371/journal.pcbi.1003118 (URL: https://doi.org/10.1371/journal.pcbi.1003118), <URL: http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118>.
-  - Lee S, Zhao Z, Miropolsky wcfL, Wu M (2023). _SKAT: SNP-Set (Sequence) Kernel Association Test_. R package version 2.2.5, <URL: https://CRAN.R-project.org/package=SKAT>.
-  - Makowski D, Lüdecke D, Patil I, Thériault R, Ben-Shachar M, Wiernik B (2023). “Automated Results Reporting as a Practical Tool to Improve Reproducibility and Methodological Best Practices Adoption.” _CRAN_. <URL: https://easystats.github.io/report/>.
-  - Mark A, Thompson R, Afrasiabi C, Wu C (2021). _mygene: Access MyGene.Info_ services_. R package version 1.30.0.
-  - Morgan M (2023). _BiocManager: Access the Bioconductor Project Package Repository_. R package version 1.30.20, <URL: https://CRAN.R-project.org/package=BiocManager>.
-  - Müller K, Wickham H (2023). _tibble: Simple Data Frames_. R package version 3.2.1, <URL: https://CRAN.R-project.org/package=tibble>.
-  - Pagès H, Carlson M, Falcon S, Li N (2021). _AnnotationDbi: Manipulation of SQLite-based annotations in Bioconductor_. R package version 1.56.2, <URL: https://bioconductor.org/packages/AnnotationDbi>.
-  - Pagès H, Lawrence M, Aboyoun P (2022). _S4Vectors: Foundation of vector-like and list-like containers in Bioconductor_. R package version 0.32.4, <URL: https://bioconductor.org/packages/S4Vectors>.
-  - Qiu Y, Mei J (2022). _RSpectra: Solvers for Large-Scale Eigenvalue and SVD Problems_. R package version 0.16-1, <URL: https://CRAN.R-project.org/package=RSpectra>.
-  - R Core Team (2021). _R: A Language and Environment for Statistical Computing_. R Foundation for Statistical Computing, Vienna, Austria. <URL: https://www.R-project.org/>.
-  - Robinson D, Hayes A, Couch S (2023). _broom: Convert Statistical Objects into Tidy Tibbles_. R package version 1.0.4, <URL: https://CRAN.R-project.org/package=broom>.
-  - Venables WN, Ripley BD (2002). _Modern Applied Statistics with S_, Fourth edition. Springer, New York. ISBN 0-387-95457-0, <URL: https://www.stats.ox.ac.uk/pub/MASS4/>.
-  - von Jouanne-Diedrich H (2017). _OneR: One Rule Machine Learning Classification Algorithm with Enhancements_. R package version 2.2, <URL: https://CRAN.R-project.org/package=OneR>.
-  - Wickham H, Bryan J, Barrett M (2022). _usethis: Automate Package and Project Setup_. R package version 2.1.6, <URL: https://CRAN.R-project.org/package=usethis>.
-  - Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A Grammar of Data Manipulation_. R package version 1.1.2, <URL: https://CRAN.R-project.org/package=dplyr>.
-  - Wickham H, Henry L (2023). _purrr: Functional Programming Tools_. R package version 1.0.1, <URL: https://CRAN.R-project.org/package=purrr>.
-  - Wickham H, Hester J, Chang W, Bryan J (2022). _devtools: Tools to Make Developing R Packages Easier_. R package version 2.4.5, <URL: https://CRAN.R-project.org/package=devtools>.
+#### R scripts and dockerfile
+R scripts (**GeneAnalysis_SKATO.R, GeneAnalysis_SKATO_Helper.R and checkDependancies.R**) are included in the repository if you wish to modify the code to suit your own analyses. 
+Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
 
 
+----
+
+##### R Packages used
+Please see **R_PackageList.tsv** for full list of R packages.
 
 ----
 ##### Special Remarks
