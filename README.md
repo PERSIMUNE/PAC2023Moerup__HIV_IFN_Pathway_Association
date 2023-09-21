@@ -77,7 +77,7 @@ An example of the parameter file would look like this:
 
 ----
 
-#### R scripts and dockerfile
+##### R scripts and dockerfile
 R scripts (**GeneAnalysis_SKATO.R, GeneAnalysis_SKATO_Helper.R and checkDependancies.R**) are included in the repository if you wish to modify the code to suit your own analyses. 
 Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
 
