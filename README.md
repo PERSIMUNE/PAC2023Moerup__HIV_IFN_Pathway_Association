@@ -17,7 +17,9 @@ Additional contacts:
 Please cite this paper when using this tool (To be updated).
 
 ## Tool Description
-Originally developed for testing SNPs within a single gene and its association with a specific, this tool has been modified to include SNPs from different genes, allowing gene sets to be tested. Genes SKATO Analysis are a set of RScripts put into a docker such that it can be downloaded and executed on the user's computer without the need to install required packages.  
+Originally developed for testing SNPs within a single gene and its association with a specific outcome (used in [this study](10.1097/QAD.0000000000003427) by Murray, DD. et al), this tool has been modified to include SNPs from different genes, allowing gene sets to be tested. Genes SKATO Analysis are a set of RScripts put into a docker such that it can be downloaded and executed on the user's computer without the need to install required packages.
+
+You can follow the below instructions to obtain the copy of the working tool. However, if for some reason you cannot get a copy, please contact preston.yui.sum.leung@regionh.dk or daniel.dawson.murray@regionh.dk and we should be able to provide a **.tar.gz** version of the docker image.
 
 ## Downloading docker image
 The image that runs the analysis can be retrieved via:
@@ -66,7 +68,7 @@ An example of the parameter file would look like this:
 |----|----|
 |pidfile| This is a list (`.txt` is fine) of subject/patient IDs that are to be included in the run. IDs are matched against IDs in **pheno_file** and **geno_file**. |
 |affy_file| A dataframe-like file storing SNP information. Contains 4 columns: AffyID, rsID, chromosome and position stored in `.RDS` format. The AffyID column stores the SNP probe id name. This is the name that details the SNP count for each patient/subject. It **may or may not** be identical to rsID. |
-|pheno_file| A dataframe-like file storing the clinical data and/or phenotypes (columns) of each subject/patient (rows) stored in `.RDS` format. |
+|pheno_file| A dataframe-like file storing the clinical data and/or phenotypes (columns) of each subject/patient (rows) stored in `.RDS` format. The confounder(s) and outcome names selected for analysis should be the same as the as column names within this file. |
 |geno_file| A dataframe-like file storing subject/patient id (rows) by SNPs (columns). The number 1 or 2 represents the copies of SNP present and zero for absence for each subject/patient. Stored in `.RDS` format. The column names for the SNPs should be same as the AffyIDs in **affy_file**. |
 
 `geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file. In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka Affymetrix SNP IDs or AffyID). For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
@@ -77,15 +79,15 @@ An example of the parameter file would look like this:
 
 ----
 
-##### R scripts and dockerfile
+#### R scripts and dockerfile
 R scripts (**GeneAnalysis_SKATO.R, GeneAnalysis_SKATO_Helper.R and checkDependancies.R**) are included in the repository if you wish to modify the code to suit your own analyses. 
-Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
 
+Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
 
 ----
 
-##### R Packages used
-Please see **R_PackageList.tsv** for full list of R packages.
+##### Crediting developers of R Packages
+Please see **R_PackageList.tsv** in the repository for the full list of R packages used to build this tool.
 
 ----
 ##### Special Remarks
