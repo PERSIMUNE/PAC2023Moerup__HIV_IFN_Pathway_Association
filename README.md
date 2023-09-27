@@ -17,7 +17,7 @@ Additional contacts:
 Please cite this paper when using this tool (To be updated).
 
 ## Tool Description
-Originally developed for testing SNPs within a single gene and its association with a specific outcome (used in [this study](10.1097/QAD.0000000000003427) by Murray, DD. et al), this tool has been modified to include SNPs from different genes, allowing gene sets to be tested. Genes SKATO Analysis are a set of RScripts put into a docker such that it can be downloaded and executed on the user's computer without the need to install required packages.
+Originally developed for testing SNPs within a single gene and its association with a specific outcome (used in [this study](https://doi.org/10.1097%2FQAD.0000000000003427) by Murray, DD. et al), this tool has been modified to include SNPs from different genes, allowing gene sets to be tested. Genes SKATO Analysis are a set of RScripts put into a docker such that it can be downloaded and executed on the user's computer without the need to install required packages.
 
 You can follow the below instructions to obtain the copy of the working tool. However, if for some reason you cannot get a copy, please contact preston.yui.sum.leung@regionh.dk or daniel.dawson.murray@regionh.dk and we should be able to provide a **.tar.gz** version of the docker image.
 
