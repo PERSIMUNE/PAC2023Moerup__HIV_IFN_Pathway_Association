@@ -71,7 +71,14 @@ An example of the parameter file would look like this:
 |pheno_file| A dataframe-like file storing the clinical data and/or phenotypes (columns) of each subject/patient (rows) stored in `.RDS` format. The confounder(s) and outcome names selected for analysis should be the same as the as column names within this file. |
 |geno_file| A dataframe-like file storing subject/patient id (rows) by SNPs (columns). The number 1 or 2 represents the copies of SNP present and zero for absence for each subject/patient. Stored in `.RDS` format. The column names for the SNPs should be same as the AffyIDs in **affy_file**. |
 
-`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file. In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka Affymetrix SNP IDs or AffyID). For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
+##### More detailed descriptions:
+`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file (this can be generated using `plink` tool). In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka the labels used to identify Affymetrix SNP IDs). These Affymetrix SNP IDS will be reused in `affy_file`. 
+
+For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. AffyID and rsID does not need to be the same, hence the easiest way to link rsID to AffyID to use CHROM:POS:ALT:REF to match the two if you're using a SNP collection source like [Ensembl GRCh37](http://ftp.ensembl.org/pub/grch37/current/variation/vcf/homo_sapiens/). Since AffyIDs are usually laboratory specific, linking it to rsID allows better access to information using standardised SNP identification.
+
+For `pheno_file' it is quite straight forward. Please see below for an example of how it could look like:
+
+For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
 
 [![CHIP](https://chip.dk/Portals/0/CHIP_new.png?ver=2020-10-01-104734-463)](https://chip.dk)
 
@@ -79,7 +86,7 @@ An example of the parameter file would look like this:
 
 ----
 
-#### R scripts and dockerfile
+### R scripts and dockerfile
 R scripts (**GeneAnalysis_SKATO.R, GeneAnalysis_SKATO_Helper.R and checkDependancies.R**) are included in the repository if you wish to modify the code to suit your own analyses. 
 
 Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
