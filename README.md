@@ -1,4 +1,6 @@
 # Genes SKATO Analysis 
+[![DOI](https://zenodo.org/badge/673114441.svg)](https://zenodo.org/badge/latestdoi/673114441)
+
 ##### Code repository used for the publication of HIV type 1 IFN genes association with HIV Viral Load
 Author of the study:
 - Sara Bohnstedt Moerup (sara.bohnstedt.moerup@regionh.dk)
