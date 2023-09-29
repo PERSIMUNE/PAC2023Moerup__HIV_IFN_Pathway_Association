@@ -72,7 +72,9 @@ An example of the parameter file would look like this:
 |geno_file| A dataframe-like file storing subject/patient id (rows) by SNPs (columns). The number 1 or 2 represents the copies of SNP present and zero for absence for each subject/patient. Stored in `.RDS` format. The column names for the SNPs should be same as the AffyIDs in **affy_file**. |
 
 ##### More detailed descriptions:
-`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file (this can be generated using `plink` tool). In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka the labels used to identify Affymetrix SNP IDs). These Affymetrix SNP IDS will be reused in `affy_file`. 
+`geno_file` and `affy_file` can be extracted from plink files using `plink` tool. 
+
+Briefly, `geno_file` is a modified form of the `.raw` file (this can be generated using `plink` tool). In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka the labels used to identify Affymetrix SNP IDs). These Affymetrix SNP IDS will be reused in `affy_file`. 
 
 ![genofile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/geno_file_example.png)
 
