@@ -82,6 +82,7 @@ For `affy_file`, this can be extracted from the `.bim` file. The modification ju
 ![affyfile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/affy_file_example.png)
 
 For `pheno_file' it is quite straight forward. Please see below for an example of how it could look like:
+
 ![phenofile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/pheno_file_example.png)
 
 For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
