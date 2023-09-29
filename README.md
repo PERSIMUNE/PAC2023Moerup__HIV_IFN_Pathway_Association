@@ -74,9 +74,15 @@ An example of the parameter file would look like this:
 ##### More detailed descriptions:
 `geno_file` and `affy_file` can be extracted from plink files using `plink` tool. Briefly, `geno_file` is a modified form of the `.raw` file (this can be generated using `plink` tool). In the `.raw` file, **IID** is used distinguish subjects and is implemented as the rownames of the dataframe in the `.RDS` file. The columns **FID, PAT, MAT, SEX and PHENOTYPE** are not used. The following columns should be the SNP ids used by the SNP array (aka the labels used to identify Affymetrix SNP IDs). These Affymetrix SNP IDS will be reused in `affy_file`. 
 
-For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. AffyID and rsID does not need to be the same, hence the easiest way to link rsID to AffyID to use CHROM:POS:ALT:REF to match the two if you're using a SNP collection source like [Ensembl GRCh37](http://ftp.ensembl.org/pub/grch37/current/variation/vcf/homo_sapiens/). Since AffyIDs are usually laboratory specific, linking it to rsID allows better access to information using standardised SNP identification.
+![genofile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/geno_file_example.png)
+
+For `affy_file`, this can be extracted from the `.bim` file. The modification just adds an extra column for rsIDs, where the rsID is associated to the matching AffyID. AffyID and rsID does not need to be the same, hence the easiest way to link rsID to AffyID to use CHROM:POS:ALT:REF to match the two if you're using a SNP collection source like [Ensembl GRCh37](http://ftp.ensembl.org/pub/grch37/current/variation/vcf/homo_sapiens/). Since AffyIDs are usually laboratory specific, linking it to rsID allows better access to information using standardised SNP identification. 
+**Note:** Please follow the column naming convention for `affy_file`.
+
+![affyfile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/affy_file_example.png)
 
 For `pheno_file' it is quite straight forward. Please see below for an example of how it could look like:
+![phenofile](https://raw.githubusercontent.com/PERSIMUNE/PAC2023Moerup__HIV_IFN_Pathway_Association/master/Examples/pheno_file_example.png)
 
 For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
 
