@@ -97,10 +97,6 @@ For `pheno_file' it is quite straight forward. Please see below for an example o
 
 For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016/12/remember-to-use-the-rds-format/).
 
-[![CHIP](https://chip.dk/Portals/0/CHIP_new.png?ver=2020-10-01-104734-463)](https://chip.dk)
-
-[![INSIGHT](https://chip.dk/portals/0/files/INSIGHT/INSIGHT-logo.png?ver=2020-06-22-123834-000)](http://insight.ccbr.umn.edu)
-
 ----
 
 ### R scripts and dockerfile
@@ -126,6 +122,9 @@ _I would like to give some special acknowledgement to Sara Bohnstedt Moerup for 
 -Preston
 
 ----
+[![CHIP](https://chip.dk/Portals/0/CHIP_new.png?ver=2020-10-01-104734-463)](https://chip.dk)
+
+[![INSIGHT](https://chip.dk/portals/0/files/INSIGHT/INSIGHT-logo.png?ver=2020-06-22-123834-000)](http://insight.ccbr.umn.edu)
 
 This README file is written using [Dillinger](dillinger.io).
 
