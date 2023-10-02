@@ -1,4 +1,6 @@
 # Genes SKATO Analysis 
+
+**Latest:** 
 [![DOI](https://zenodo.org/badge/673114441.svg)](https://zenodo.org/badge/latestdoi/673114441)
 
 ##### Code repository used for the publication of HIV type 1 IFN genes association with HIV Viral Load
@@ -26,7 +28,9 @@ You can follow the below instructions to obtain the copy of the working tool. Ho
 ## Downloading docker image
 The image that runs the analysis can be retrieved via:
 ```
-docker pull pdawgzgg/gene_analysis_skato
+docker pull pdawgzgg/gene_analysis_skato:[TAG]
+
+where [TAG] is the version you would like to pull. (e.g. v:1.0)
 ```
 
 
@@ -101,6 +105,12 @@ For how to generate `.RDS` check out [this blog](https://www.r-bloggers.com/2016
 R scripts (**GeneAnalysis_SKATO.R, GeneAnalysis_SKATO_Helper.R and checkDependancies.R**) are included in the repository if you wish to modify the code to suit your own analyses. 
 
 Additionally, the dockerfile (**DockerScript/DockerFile**) to build the image is also available for reference or modification if you wish to build your modified R scripts in to docker images for portability. 
+
+**Archived Versions:**
+|Version| Repoistory | Notes |
+|----|----|----|
+|v1.0.0-PreRelease|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8388432.svg)](https://doi.org/10.5281/zenodo.8388432)| Same base code. Incorrect tag. Recorded here for reference.|
+|v1.0-PreRelease| [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8397641.svg)](https://doi.org/10.5281/zenodo.8397641)| Current version.
 
 ----
 
