@@ -167,7 +167,7 @@ if(!is.null(opt$param_file)){
   )
   data.table::fwrite(
     result_formatted,
-    file = opt$out,
+    file = default_filePath,
     sep = "\t"
   )
 }else{
